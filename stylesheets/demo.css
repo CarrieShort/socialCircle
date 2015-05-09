@@ -1,0 +1,35 @@
+
+body {
+	margin:0;
+	padding:0;
+}
+.socialCircle-item {
+	width:80px;
+	height:80px;
+	position:absolute;
+	background:#333;
+	margin:50%;
+	text-align:center;
+	color:#ffffff;
+	font-size:30px;
+	cursor:pointer;
+}
+.socialCircle-container {
+	position:relative;
+	width:500px;
+	height:500px;
+	margin:0 auto;
+}
+.socialCircle-center {
+	width:120px;
+	height:120px;
+	background:#35DBCD;
+	margin:50%;
+	position:absolute;
+	text-align:center;
+	color:#ffffff;
+	font-size:60px;
+	cursor:pointer;
+}
+
+

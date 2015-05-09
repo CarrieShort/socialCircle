@@ -8,6 +8,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/demo.css" media="screen">
   </head>
   <body>
     <section class="page-header">
@@ -19,7 +20,15 @@
     </section>
 
     <section class="main-content">
-      <p>To be edited soon</p>
+      <div class="socialCircle-container">
+  <div class="socialCircle-item"><i class="fa fa-behance"></i></div>
+  <div class="socialCircle-item"><i class="fa fa-github"></i></div>
+  <div class="socialCircle-item"><i class="fa fa-linkedin"></i></div>
+  <div class="socialCircle-item"><i class="fa fa-facebook"></i></div>
+  <div class="socialCircle-item"><i class="fa fa-twitter"></i></div>
+  <div class="socialCircle-item"><i class="fa fa-reddit"></i></div>
+  <div class="socialCircle-center closed"><i class="fa fa-share-alt"></i></div>
+</div>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/CarrieShort/socialCircle">Socialcircle</a> is maintained by <a href="https://github.com/CarrieShort">CarrieShort</a>.</span>
@@ -29,7 +38,16 @@
 
     </section>
 
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="scripts/socialCircle.js"></script>  
+<script type="text/javascript">
+$( ".socialCircle-center" ).socialCircle({
+	rotate: 0,
+	radius:200,
+	circleSize: 2,
+	speed:500
+});
+</script>
   </body>
 </html>
 
