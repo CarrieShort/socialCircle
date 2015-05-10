@@ -21,6 +21,12 @@
     </section>
 
     <section class="main-content">
+    <form action="demo_form.asp">
+  Rotate: <input type="text" name="inputRotate" class="input" value="90" id="inputRotation"><br>
+  Radius: <input type="text" name="inputRadius" class="input"  value="200" id="inputRadius"><br>
+  
+</form>
+<div class="apply">Apply</div>
       <div class="socialCircle-container">
   <div class="socialCircle-item"><i class="fa fa-behance"></i></div>
   <div class="socialCircle-item"><i class="fa fa-github"></i></div>
@@ -42,12 +48,23 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="scripts/socialCircle.js"></script>  
 <script type="text/javascript">
-$( ".socialCircle-center" ).socialCircle({
-	rotate: 0,
-	radius:200,
+$(document).ready(function(){
+        $(".apply").click(function(){
+            var inputRotate = $('#inputRotate').val(),
+	    inputRadius = $('#inputRadius').val(),
+		inputCircleSize = $('#txt_name').val(),
+		inputSpeed = $('#txt_name').val();
+		$( ".socialCircle-center" ).socialCircle({
+	rotate: inputRotate,
+	radius:inputRadius,
 	circleSize: 2,
 	speed:500
 });
+        });
+    })
+	
+	$( ".socialCircle-center" ).socialCircle();
+
 </script>
   </body>
 </html>
