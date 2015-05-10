@@ -9,7 +9,7 @@
  	
     $.fn.socialCircle = function( options ) {
 		// Make everything a circle and center
-		$(".socialCircle-container").children().each( function() {
+		$(this).siblings().andSelf().each( function() {
 			var iconRadius = $( this ).width() / 2;
 			 $( this ).css({
 			  	"border-radius": iconRadius + "px",
@@ -18,6 +18,7 @@
 				"line-height": $( this ).width() + "px"
 			});
 		});
+		var centerCircle = $(this)
         // Default Options
         var settings = $.extend({
             // Rotate in degrees around the circle 0 to 360
@@ -57,8 +58,8 @@
 	function expand() {
 	// variables for expand function	
 		var radius = settings.radius,
-		icons = $('.socialCircle-item'), 
-		container = $('.socialCircle-container'),
+		icons = centerCircle.siblings(), 
+		container = centerCircle.parent(),
 		width = container.width(), 
 		height = container.height(),
 		step = (2*Math.PI) / icons.length /settings.circleSize,
@@ -82,8 +83,8 @@
 
     function retract() {
 		var radius = 0,
-		icons = $('.socialCircle-item'), 
-		container = $('.socialCircle-container'),
+		icons = centerCircle.siblings(), 
+		container = centerCircle.parent(),
 		width = container.width(), 
 		height = container.height(),
 		angle = rotate, 
