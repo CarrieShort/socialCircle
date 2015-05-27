@@ -15,6 +15,7 @@
 			  	"border-radius": iconRadius + "px",
 				"top": "-" + iconRadius + "px",
 				"left": "-" + iconRadius + "px",
+				"margin": "50%",
 				"line-height": $( this ).width() + "px"
 			});
 		});
@@ -25,7 +26,7 @@
 			// Distance of icons from the center
 			radius:200,
 			// Divide circle by
-            circleSize: 2,
+            circleSize: 0.5,
 			// Animation speed
 			speed:500
         }, options );
@@ -61,7 +62,7 @@
 		container = $('.socialCircle-container'),
 		width = container.width(), 
 		height = container.height(),
-		step = (2*Math.PI) / icons.length /settings.circleSize,
+		step = (2*Math.PI) / icons.length * settings.circleSize,
 		angle = rotate + (step/2);
 		// Determine placement of icons	
 		icons.each(function() {
@@ -87,7 +88,7 @@
 		width = container.width(), 
 		height = container.height(),
 		angle = rotate, 
-		step = (2*Math.PI) / icons.length/settings.circleSize;
+		step = (2*Math.PI) / icons.length * settings.circleSize;
 		// Determine placement of icons	
         icons.each(function() {
 		var x = Math.round(width/2 + radius * Math.cos(angle) - $(this).width()/2);
